@@ -1,9 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { Header } from './header/header';
+import { User } from './user/user';
+
 @Component({
-  imports: [ Header],
+  imports: [Header, User],
   selector: 'app-root',
-  styleUrl: './app.css',
+  styleUrl: './layout/layout.css',
   templateUrl: './app.html',
 })
 export class App {
