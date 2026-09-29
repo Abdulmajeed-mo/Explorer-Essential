@@ -18,7 +18,17 @@ export const dummyUsers = [
         id: 4,
         name: 'أحمد المزروعي',
         avatar: 'user4.png',
-    }   
+    }   ,
+    {
+      id: 5,
+      name: 'سعود العتيبي',
+      avatar: 'user5.png',
+    },
+    {
+      id: 6,
+      name: 'مروان القحطاني',
+      avatar: 'user6.png',
+    }
 
 ]
 export class User {

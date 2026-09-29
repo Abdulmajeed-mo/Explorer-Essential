@@ -1,14 +1,12 @@
 <div dir="rtl" class="flex flex-col gap-3">
-
-  @for (user of users; track user.id) {
-   <button
-  class="flex h-16 w-full min-w-40 cursor-pointer items-center justify-center rounded-full bg-[#5A94A7] p-2 font-inherit hover:bg-[#719687] active:bg-[#5A94A7]/60 focus:outline-none focus:ring-2 focus:ring-[#719687] focus:ring-offset-2">
-    <img [src]="'/users/' + user.avatar" [alt]="user.name" class="w-10 h-10 mr-3 rounded-full ">
-      <span
-        class="rounded-lg  px-4 py-2   text-[#FFFF] font-bold  ">
+  @for (user of users(); track user.id) {
+    <button 
+      class="flex h-16 w-full min-w-40 cursor-pointer items-center justify-center rounded-full bg-[#5A94A7]/90 p-2 font-inherit hover:bg-[#719687]/90 active:bg-[#5A94A7]/60 focus:outline-none focus:ring-5 focus:ring-[#EAA043] "
+    >
+      <img [src]="'/users/' + user.avatar" [alt]="user.name" class="w-10 h-10 mr-3 rounded-full" />
+      <span class="rounded-lg px-4 py-2 text-[#FFFF] font-bold">
         {{ user.name }}
       </span>
     </button>
   }
-  
 </div>

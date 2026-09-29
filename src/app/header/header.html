@@ -1,13 +1,29 @@
-<header class="bg-[#264431]/70 rounded-full  mt-6 w-1/2 mx-auto backdrop-blur-md flex flex-col items-center">
+<header dir="rtl" class="bg-[#264431]/70 rounded-full w-1/2 mx-auto backdrop-blur-md">
 
-<img src="Task-Management-logo.png"alt="Task Management Logo"class="logo w-35">   
- <div>
-    <h1 class="text-center text-4xl font-bold text-[#EAA043]">
-  Explorer Essential
-</h1>
+  <div class="flex flex-row items-center gap-4 p-4">
 
-<p class="text-center text-[#BED9EB]">
-  Your essential task management solution
-</p>
- </div>
+    <div class="flex items-center">
+      <img src="Task-Management-logo.png" alt="Task Management Logo" class="logo w-35">
+    </div>
+
+    <div class="flex flex-col items-center justify-center gap-5 flex-1">
+
+      <h1 class="text-center text-4xl font-bold text-[#EAA043]">
+        نظام إدارة المهام
+      </h1>
+
+
+
+      <h2      [class.opacity-0]="!isVisible()"
+               [class.opacity-100]="isVisible()"
+              class="text-center text-[#BED9EB] font-bold text-lg transition-opacity duration-500">
+
+              
+            {{ descriptions[currentDescription()] }}
+     </h2>  
+
+    </div>
+
+  </div>
+
 </header>

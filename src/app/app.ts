@@ -1,6 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { Header } from './header/header';
 import { User } from './user/user';
+import { dummyUsers } from './dummy-users';
 
 @Component({
   imports: [Header, User],
@@ -9,5 +10,5 @@ import { User } from './user/user';
   templateUrl: './app.html',
 })
 export class App {
-  protected readonly title = signal('Explorer-Essential');
+  users = dummyUsers;
 }

@@ -1,12 +1,13 @@
 <div
-  class="min-h-screen bg-cover bg-center bg-no-repeat"
-  style="background-image: url('flower.jpg')">
+  class="min-h-screen bg-cover bg-center bg-no-repeat pt-2"
+  style="background-image: url('flower.jpg')"
+>
   <app-header></app-header>
 
-
   <main>
-    <div id="users">
-      <app-user></app-user>
+    <div id="users" class="md:col-start-2 md:justify-self-end">
+      <app-user [users]="users"></app-user>
     </div>
   </main>
 </div>
+

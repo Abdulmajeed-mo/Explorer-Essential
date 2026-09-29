@@ -1,9 +1,8 @@
-import { Component } from '@angular/core';
-import {dummyUsers} from '../dummy-users';
+import { Component ,input} from '@angular/core';
+import { dummyUsers } from '../dummy-users';
 
 // عشان يختار رقم عشوائي من المصفوفة
-const randomIndex = Math.floor(Math.random() * dummyUsers.length);
-
+// const randomIndex = Math.floor(Math.random() * dummyUsers.length);
 
 @Component({
   imports: [],
@@ -12,5 +11,7 @@ const randomIndex = Math.floor(Math.random() * dummyUsers.length);
   templateUrl: './user.html',
 })
 export class User {
-  users = dummyUsers;
+                    users = input.required<typeof dummyUsers>();
+
+
 }
