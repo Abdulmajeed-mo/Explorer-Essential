@@ -1,4 +1,4 @@
-import { Component ,input} from '@angular/core';
+import { Component ,input  ,output} from '@angular/core';
 import { dummyUsers } from '../dummy-users';
 
 // عشان يختار رقم عشوائي من المصفوفة
@@ -10,7 +10,11 @@ import { dummyUsers } from '../dummy-users';
   styleUrl: './user.css',
   templateUrl: './user.html',
 })
+
+
 export class User {
+  selectUser=output<number>();
+              //signal input
                     users = input.required<typeof dummyUsers>();
 
 

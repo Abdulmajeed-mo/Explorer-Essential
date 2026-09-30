@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, output } from '@angular/core';
 
 @Component({
   selector: 'app-task',
@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './task.css',
 })
 export class Task {
+
+  @Input({ required: true }) name!: string;
+
+  openAddTask = output<void>();
 
 }

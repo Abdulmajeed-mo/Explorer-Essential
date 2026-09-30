@@ -1,0 +1,67 @@
+<div dir="rtl" class="rounded-2xl bg-[#264431] p-6">
+
+  <div class="mb-6 flex items-center justify-between">
+
+    <h2 class="text-2xl font-bold text-[#EAA043]">
+      إضافة مهمة جديدة
+    </h2>
+
+    <button
+      (click)="back.emit()"
+      class="rounded-lg bg-[#EAA043] px-4 py-2 font-bold text-[#264431] hover:bg-[#719687] hover:text-white"
+    >
+      رجوع
+    </button>
+
+  </div>
+
+  <div class="space-y-5">
+
+    <div>
+      <label class="mb-2 block font-bold text-[#ffe4c4]">
+        عنوان المهمة
+      </label>
+
+      <input
+        type="text"
+        placeholder="اكتب عنوان المهمة"
+        class="w-full rounded-lg border-none bg-[#719687] px-4 py-3 text-[#ffffff] outline-none placeholder:text-[#ffe4c4]"
+      />
+    </div>
+
+    <div>
+      <label class="mb-2 block font-bold text-[#ffe4c4]">
+        التاريخ
+      </label>
+
+      <input
+        type="date"
+        class="w-full rounded-lg border-none bg-[#719687] px-4 py-3 text-[#ffffff] outline-none"
+      />
+    </div>
+
+    <div>
+      <label class="mb-2 block font-bold text-[#ffe4c4]">
+        وصف المهمة
+      </label>
+
+      <textarea
+        rows="5"
+        placeholder="اكتب وصف المهمة"
+        class="w-full resize-none rounded-lg border-none bg-[#719687] px-4 py-3 text-[#ffffff] outline-none placeholder:text-[#ffe4c4]"
+      ></textarea>
+    </div>
+
+    <div class="flex justify-center">
+
+      <button
+        class="rounded-lg bg-[#EAA043] px-6 py-3 font-bold text-[#264431] hover:bg-[#BED9EB]"
+      >
+        إضافة المهمة
+      </button>
+
+    </div>
+
+  </div>
+
+</div>

@@ -4,12 +4,31 @@
 >
   <app-header></app-header>
 
-  <main>
-    <div id="users" class="md:col-start-2 md:justify-self-end">
-      <app-user [users]="users"></app-user>
-    </div>
-<app-task class="md:col-start-1 md:row-start-1 w-full min-w-0"></app-task>
 
+<main [class.three-columns]="showAddTask()">
+
+    <div id="users" class="md:col-start-3 md:justify-self-end">
+      <app-user [users]="users"        //$ يستقبل المصفوفة من الاب  
+      (selectUser)="onselectUser($event)"
+      ></app-user>
+
+    </div>
+
+
+<app-task
+  [name]="selectedUser.name"
+  (openAddTask)="showAddTask.set(true)"
+  class="md:col-start-2 md:row-start-1 w-full min-w-0">
+</app-task>
+
+
+
+@if (showAddTask()) {
+  <app-add-task
+    (back)="showAddTask.set(false)"
+    class="md:col-start-1 md:row-start-1 w-full min-w-0"
+  ></app-add-task>
+}
 </main>
 </div>
 

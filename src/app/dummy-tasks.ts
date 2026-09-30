@@ -1,0 +1,68 @@
+import { Task } from './task.model';
+
+export const dummyTasks: Task[] = [
+  {
+    id: 1,
+    userId: 1,
+    title: 'مراجعة تقرير المبيعات',
+    date: '2026-09-30',
+    description: 'مراجعة تقرير المبيعات الشهري والتأكد من صحة البيانات.',
+    completed: false,
+  },
+  {
+    id: 2,
+    userId: 1,
+    title: 'تحديث بيانات العملاء',
+    date: '2026-10-02',
+    description: 'تحديث بيانات العملاء وإضافة المعلومات الجديدة.',
+    completed: false,
+  },
+  {
+    id: 3,
+    userId: 2,
+    title: 'إعداد التقرير الأسبوعي',
+    date: '2026-10-01',
+    description: 'إعداد التقرير الأسبوعي ومراجعته قبل الإرسال.',
+    completed: false,
+  },
+  {
+    id: 4,
+    userId: 2,
+    title: 'متابعة الطلبات',
+    date: '2026-10-04',
+    description: 'متابعة الطلبات المفتوحة والتأكد من حالتها.',
+    completed: true,
+  },
+  {
+    id: 5,
+    userId: 3,
+    title: 'مراجعة البريد الإلكتروني',
+    date: '2026-10-03',
+    description: 'مراجعة الرسائل المهمة والرد على الطلبات.',
+    completed: false,
+  },
+  {
+    id: 6,
+    userId: 4,
+    title: 'تجهيز الاجتماع',
+    date: '2026-10-05',
+    description: 'تجهيز النقاط والملفات المطلوبة للاجتماع.',
+    completed: false,
+  },
+  {
+    id: 7,
+    userId: 5,
+    title: 'مراجعة المهام',
+    date: '2026-10-06',
+    description: 'مراجعة المهام الحالية وتحديث حالاتها.',
+    completed: false,
+  },
+  {
+    id: 8,
+    userId: 6,
+    title: 'إعداد خطة العمل',
+    date: '2026-10-07',
+    description: 'إعداد خطة العمل للأسبوع القادم.',
+    completed: true,
+  },
+];
