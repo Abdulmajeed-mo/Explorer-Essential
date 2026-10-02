@@ -15,7 +15,7 @@
 
   </div>
 
-  <div class="space-y-5">
+  <form (ngSubmit)="onSubmit()" class="space-y-5">
 
     <div>
       <label class="mb-2 block font-bold text-[#ffe4c4]">
@@ -24,6 +24,8 @@
 
       <input
         type="text"
+        name="title"
+        [(ngModel)]="title"
         placeholder="اكتب عنوان المهمة"
         class="w-full rounded-lg border-none bg-[#719687] px-4 py-3 text-[#ffffff] outline-none placeholder:text-[#ffe4c4]"
       />
@@ -36,6 +38,8 @@
 
       <input
         type="date"
+        name="date"
+        [(ngModel)]="date"
         class="w-full rounded-lg border-none bg-[#719687] px-4 py-3 text-[#ffffff] outline-none"
       />
     </div>
@@ -47,6 +51,8 @@
 
       <textarea
         rows="5"
+        name="description"
+        [(ngModel)]="description"
         placeholder="اكتب وصف المهمة"
         class="w-full resize-none rounded-lg border-none bg-[#719687] px-4 py-3 text-[#ffffff] outline-none placeholder:text-[#ffe4c4]"
       ></textarea>
@@ -55,6 +61,7 @@
     <div class="flex justify-center">
 
       <button
+        type="submit"
         class="rounded-lg bg-[#EAA043] px-6 py-3 font-bold text-[#264431] hover:bg-[#BED9EB]"
       >
         إضافة المهمة
@@ -62,6 +69,6 @@
 
     </div>
 
-  </div>
+  </form>
 
 </div>

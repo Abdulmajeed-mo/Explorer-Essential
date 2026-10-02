@@ -1,4 +1,5 @@
 import { Component, Input, output } from '@angular/core';
+import { Task as TaskModel } from '../task.model';
 
 @Component({
   selector: 'app-task',
@@ -7,9 +8,12 @@ import { Component, Input, output } from '@angular/core';
   styleUrl: './task.css',
 })
 export class Task {
-
+  
   @Input({ required: true }) name!: string;
 
-  openAddTask = output<void>();
+  @Input({ required: true }) tasks!: TaskModel[];
 
+ openAddTask = output<void>();
+completeTask = output<number>();
+deleteTask = output<number>();
 }

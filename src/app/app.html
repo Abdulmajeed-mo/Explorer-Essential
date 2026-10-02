@@ -3,7 +3,13 @@
   style="background-image: url('flower.jpg')"
 >
   <app-header></app-header>
-
+@if (toastMessage()) {
+  <div
+    class="fixed top-5 left-1/2 z-50 -translate-x-1/2 rounded-lg bg-green-600 px-6 py-3 font-bold text-white shadow-lg transition-opacity duration-500"
+  >
+    {{ toastMessage() }}
+  </div>
+}
 
 <main [class.three-columns]="showAddTask()">
 
@@ -17,17 +23,21 @@
 
 <app-task
   [name]="selectedUser.name"
+  [tasks]="selectedUserTasks"
   (openAddTask)="showAddTask.set(true)"
-  class="md:col-start-2 md:row-start-1 w-full min-w-0">
-</app-task>
+  (deleteTask)="onDeleteTask($event)"
+  class="md:col-start-2 md:row-start-1 w-full min-w-0"
+></app-task>
 
 
 
 @if (showAddTask()) {
-  <app-add-task
-    (back)="showAddTask.set(false)"
-    class="md:col-start-1 md:row-start-1 w-full min-w-0"
-  ></app-add-task>
+<app-add-task
+  [userId]="selectedUserId"
+  (taskCreated)="onTaskCreated($event)"
+  (back)="showAddTask.set(false)"
+  class="md:col-start-1 md:row-start-1"
+></app-add-task>
 }
 </main>
 </div>
